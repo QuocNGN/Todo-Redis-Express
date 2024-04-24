@@ -1,0 +1,184 @@
+body {
+    background-color: #1f1e1e;
+    color: white;
+    overflow: hidden;
+}
+h1 {
+    margin-top: 2%;
+    text-align: center;
+    font-size: 4.2rem;
+}
+
+.primaryBtn {
+    background-color: rgb(0, 230, 122);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 60px;
+    font-weight: bold;
+    transition: 0.25s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+        background-color: rgb(4, 196, 106);
+    }
+}
+.secondaryBtn {
+    background-color: #5e5e5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 60px;
+    // font-weight: 600;
+    transition: 0.25s;
+    cursor: pointer;
+    width: fit-content;
+    &:nth-child(2) {
+        margin-left: 10px;
+    }
+}
+.active {
+    background-color: rgb(0, 230, 122);
+    color: #000;
+    font-weight: bolder;
+}
+.todo-wrapper {
+    background-color: #353434;
+    padding: 2%;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0px 5px 7px rgb(27, 27, 27);
+}
+@media only screen and (max-width: 780px) {
+    .todo-wrapper {
+        width: 80%;
+    }
+}
+.todo-input {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        &:first-child {
+            width: 80%;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        input {
+            padding: 8px;
+            border: none;
+            width: 100%;
+            transition: 0.25s;
+            &:focus {
+                outline: 2px solid #00e67a;
+            }
+        }
+        &:last-child {
+            width: 15%;
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+.btn-area {
+    margin-bottom: 15px;
+}
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    &-item {
+        display: flex;
+        background-color: #414040;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 3px 5px rgb(43, 42, 42);
+        h6 {
+            font-size: 22px;
+            color: rgb(0, 230, 122);
+            font-weight: bold;
+            margin: 0;
+            width: fit-content;
+            padding-right: 20px;
+        }
+        p {
+            font-size: 14px;
+            color: rgb(161, 161, 161);
+            margin-top: 8px;
+        }
+        .del-icon,
+        .check-icon,
+        .edit-icon {
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.25s;
+            margin-left: 5px;
+            &:hover {
+                transform: scale(1.1);
+                color: #ff6651;
+            }
+        }
+        .check-icon {
+            font-size: 35px;
+            color: rgb(0, 230, 122);
+            &:hover {
+                color: rgb(9, 165, 90);
+            }
+        }
+        .edit-icon {
+            &:hover {
+                color: #2cccff;
+            }
+        }
+    }
+    .edit_wrapper {
+        background-color: #414040;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        input,
+        textarea {
+            border: 1px solid lightgray;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 3px;
+            transition: 0.25s;
+            &:focus {
+                outline: 3px solid rgb(9, 182, 98);
+            }
+        }
+        button {
+            margin: 5px;
+            margin-top: 10px;
+            padding: 10px 35px;
+            width: fit-content;
+            transition: 0.25s;
+            font-size: 16px;
+            &:hover {
+                color: #fff;
+                font-weight: bolder;
+            }
+            &:nth-child(2) {
+                color: #fff;
+                padding: 10px 20px;
+                background-color: #5e5e5e;
+            }
+        }
+    }
+}
